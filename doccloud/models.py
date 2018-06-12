@@ -102,7 +102,7 @@ class Document(models.Model):
     updated_at = models.DateTimeField(editable=False,
                                       blank=True, db_index=True)
     dc_properties = models.ForeignKey(DocumentCloudProperties,
-                                      blank=True, null=True)
+                                      blank=True, null=True, on_delete=models.DO_NOTHING)
     access_level = models.CharField(max_length=32, choices=PRIVACY_LVLS)
 
     class Meta:
