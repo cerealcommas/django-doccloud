@@ -95,7 +95,7 @@ class Document(models.Model):
     """
     file = models.FileField(upload_to=settings.DOCUMENTS_PATH, max_length=255)
     slug = AutoSlugField(populate_from=('title',))
-    user = models.ForeignKey(User, blank=True, null=True)
+    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=255)
     description = models.TextField(null=True, blank=True)
     created_at = CreationDateTimeField(db_index=True)
