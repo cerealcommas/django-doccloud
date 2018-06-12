@@ -1,6 +1,6 @@
 # from django.conf.urls import url, patterns
 # from django.conf.urls.defaults import patterns
-from django.urls.defaults import include, re_path
+from django.urls import include, re_path
 # from django.conf.urls.defaults import url
 
 urlpatterns = patterns('',
